@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+    <title>Untitled Document</title>
+    
+</head>
+<body>
+    <script type="text/javascript">   
+        /*
+         * param1 Array 
+         * param2 Array
+         * return true or false
+         */
+        function arraysSimilar(arr1, arr2){
+            if(arr1.length == arr2.length){
+                var tempArry1 = arr1.sort();
+                var tempArry2 = arr2.sort();
+                var j = 0;
+                var flag = 0;
+                for(i=0; i<arr1.length; i++){
+                    if(tempArry1[i] === tempArry2[i]){
+                        if(tempArry1[i]&&tempArry2[i] == null){
+                            flag = 1;
+                            break;
+                        }
+                        j++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                if(flag == 1){
+                    return false;
+                }
+                if(i == j){
+                    return true;
+                }
+                else if(i != j){
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+    <script src="testData.js"></script>
+</body>
+</html>
