@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+    <title>Untitled Document</title>
+    
+</head>
+<body>
+    <script type="text/javascript">   
+
+    function demo(){}
+    demo.prototype.TJoe = 18;
+
+    var test = new demo();
+
+    demo.prototype = {CSDN : 666};		//覆盖语句移到了实例创建之后
+
+    alert(test.TJoe);
+
+    </script>
+</body>
+</html>
